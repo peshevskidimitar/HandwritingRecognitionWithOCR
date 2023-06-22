@@ -27,7 +27,7 @@ if __name__ == '__main__':
     grayscale_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     # Blur the grayscale image using Gaussian blur
-    blured_image = blurred = cv2.GaussianBlur(grayscale_image, (5, 5), 0)
+    blured_image = cv2.GaussianBlur(grayscale_image, (5, 5), 0)
 
     # Threshold the grayscale image using Otsu's method
     _, thresh = cv2.threshold(grayscale_image, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
